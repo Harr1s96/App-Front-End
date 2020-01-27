@@ -1,0 +1,57 @@
+.card {
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.2);
+  width: 450px;
+  height: 390px;
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#details {
+  position: absolute;
+  top: 165px;
+  left: 75px;
+  padding-top: 38px;
+}
+
+.material-icons {
+  font-size: 178px;
+  position: relative;
+  top: 26px;
+}
+
+.title {
+  color: rgb(10, 10, 10);
+  font-size: 22px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: darkslateblue;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  font-size: 18px;
+  position: absolute;
+  top: 300px;
+  left: 45px;
+  height: 60px;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}

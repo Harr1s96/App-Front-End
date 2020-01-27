@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+    />
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Lectures Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- custom internal css for personal touch -->
+    <link href="./css/main.css" type="text/css" rel="stylesheet"/>
+
+    <!-- loading the axios library from a CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <style>
+      .list-group h1 {
+        background-color: cornflowerblue;
+      }
+      #submit {
+        background-color: cornflowerblue;
+      }
+      #input-field #lecture {
+        margin: 0, auto;
+        width: 300px;
+      }
+      #modal-body #update-lecture {
+        width: 300px;
+      }
+    </style>
+  </head>
+
+  <body onload="getLectures();">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">UNIVERSAL</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="input-field">
+    
+      <input type="text" id="lecture" placeholder="Enter Lecture">
+      
+      <button id="submit" onclick="postLectures();">Submit</button>
+  
+  </div>
+
+  <div id="menu" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Would you like to update or delete?</h4>
+        </div>
+        <div id="modal-body" class="modal-body">
+          <input type="text" id="update-lecture" placeholder="Enter Lecture">
+        </div>
+        <div class="modal-footer">
+          <button id="update-button" type="button" class="btn btn-success" onclick="updateLecture(this.value);">Update</button>
+          <button id="delete-button" type="button" class="btn btn-danger" onclick="deleteLecture(this.value);">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="lecture-list">
+    <ul id="list-group" class="list-group">
+      <h1>Lectures</h1>
+    </ul>
+  </div>
+
+    <div id="list-div"></div>
+
+    <script src="./js/lecture-page.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.slim.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

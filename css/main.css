@@ -1,0 +1,45 @@
+
+body {
+  background-image: linear-gradient(
+                            rgba(140, 180, 240, 0.4),
+                            rgba(140, 180, 240, 0.4)), 
+                              url('https://source.unsplash.com/szFUQoyvrxM/1920x1080');
+}
+
+.navbar-brand {
+  text-align: left;
+}
+
+.navbar {
+  border-bottom:15px solid darkslateblue;
+}
+
+.list-group {
+position: fixed;
+top: 18%;
+left: 5%;
+width: 380px;
+}
+
+.list-group h1 {
+text-align: center;
+background-color: orange;
+margin: 0px 0px 0px 0px;
+padding-top: 3%;
+padding-bottom: 3%;
+}
+
+#input-field {
+  margin: 20px;
+  position: absolute;
+  left: 600px;
+}
+
+#submit {
+  background-color: orange;
+  width: 95px;
+  border: none;
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+}
