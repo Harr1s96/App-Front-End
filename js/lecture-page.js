@@ -14,7 +14,7 @@ const mainDiv = document.getElementById("list-div");
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('id');
   
-const lectureData = axios.get("http://3.11.133.109:9090/UniversalApp/teachers/modules/" + myParam)
+const lectureData = axios.get("/UniversalApp/teachers/modules/" + myParam)
     .then(response => {console.log(response.data); 
         return response.data;});
 
@@ -24,7 +24,7 @@ function postLectures() {
 
     const toPost = [{"lectureName": lectureName}]
 
-    axios.put("http://3.11.133.109:9090/UniversalApp/module/" + myParam, toPost)
+    axios.put("/UniversalApp/module/" + myParam, toPost)
         .then(response => {console.log(response); location.reload();})
 }
 
@@ -60,7 +60,7 @@ function updateLecture(elementId) {
 
     const toUpdate = document.getElementById("update-lecture").value;
     const data = {"lectureName": toUpdate}
-    axios.put("http://3.11.133.109:9090/UniversalApp/lecture?id=" + elementId, data)
+    axios.put("/UniversalApp/lecture?id=" + elementId, data)
         .then(response => {
             console.log(response);
             updateButton.value = ""; 
@@ -70,7 +70,7 @@ function updateLecture(elementId) {
 
 function deleteLecture(elementId) {
 
-    axios.delete("http://3.11.133.109:9090/UniversalApp/lecture/" + elementId)
+    axios.delete("/UniversalApp/lecture/" + elementId)
         .then(response => {
             console.log(response);
             deleteButton.value = "";
