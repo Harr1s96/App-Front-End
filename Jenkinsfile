@@ -14,5 +14,10 @@ pipeline {
                 }
             }
         }
+        stage ('-- trigger test pipeline --') {
+            steps {
+                build job: 'selenium-pipeline'
+            }
+        }
     }
 }
