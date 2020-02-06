@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('-- build docker image --') {
             steps {
-                sh "docker build -t front-end ."
+                sh "docker build -t front-end:prod ."
             }
         }
         stage('-- deploy image to Docker Hub --') {
             steps {
                 withDockerRegistry([credentialsId: "docker-credentials", url: ""]) {
-                    sh 'docker tag front-end bigheck123/front-end'
-                    sh 'docker push bigheck123/front-end'
+                    sh 'docker tag front-end:prod bigheck123/front-end:prod'
+                    sh 'docker push bigheck123/front-end:prod'
                 }
             }
         }
